@@ -2,7 +2,7 @@
 www.dio.me
 
 
-**Solução:** https://github.com/rhayssakramer/trilha-dotnet-desafio-poo/tree/v.1
+**Resolução do Desafio:** https://github.com/rhayssakramer/trilha-dotnet-desafio-poo/tree/v.1
 
 ## Desafio de projeto
 Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
