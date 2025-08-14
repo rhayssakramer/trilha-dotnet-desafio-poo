@@ -1,91 +1,137 @@
-# DIO - Trilha .NET - Programação orientada a objetos
+## 📱 Sistema de Celulares em .NET - Programação Orientada a Objetos
 
-Mais um `Projeto na Linguagem de Programação C#`e também mais um desafio da trilha `.NET` do Decola Tech Avanade 4ª Edição 2024. 
+Este repositório corresponde ao Desafio #02 da [Bootcamp Decola Tech 2024](https://web.dio.me/track/decola-tech-avanade-net-developer) para aplicar conhecimentos de **Programação Orientada a Objetos em** `C#`.
+O objetivo é criar um sistema de console em .NET 6.0 que modele diferentes tipos de celulares, utilizando herança, abstração e polimorfismo.
 
-## Resultado do Projeto
-<img>
+### Índice
+- [Introdução]()
+- [Tecnologias Utilizadas]()
+- [Desafio de Projeto]()
+- [Objetivos]()
+  - [x] Pré-requisitos
+  - [x] Estrutura do Projeto
+  - [x] Regras e Validações  
+  - [x] Especificações de Conteúdo  
+  - [x] Especificações Técnicas  
+- [Passo a Passo]()
+- [Modelo do Diagrama]()
+- [Execução do Projeto]()
+- [Créditos]()
+- [Autora]()
 
-## Tecnologias Utilizadas
+### ▶️ Introdução
+O desafio consiste em criar um sistema de console utilizando .NET e C# para treinar os conhecimentos adquiridos no módulo de `POO`. Na proposta do desafio o desenvoledor é responsável por modelar um sistema que trabalha com celulares que represente um modelo abstrato de celular, com comportamentos específicos para Nokia e iPhone. Para isso, foi preciso fazer o modelo abstrato de celular, que disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+
+### 💻 Tecnologias Utilizadas
 
 | Linguagens de Programação | Ferramentas e Tecnologias |
 | :-----------------: | :-----------------------: |
-| <img height="40" src="https://learn.microsoft.com/pt-br/dotnet/csharp/"> <img height="40" src="https://dotnet.microsoft.com/pt-br/platform/try-dotnet"> <img height="40" src="https://nodejs.org/docs/latest/api/"> | <img height="40" src="https://code.visualstudio.com/docs">
+| <img height="40" src="https://skillicons.dev/icons?i=cs"> <img height="40" src="https://skillicons.dev/icons?i=dotnet"> <img height="40" src="https://skillicons.dev/icons?i=nodejs"> | <img height="40" src="https://skillicons.dev/icons?i=vscode">
 
-## Requisitos do Projeto
+#### 🎯 Desafio de Projeto
+- Criar uma classe abstrata `Smartphone` com atributos e métodos básicos.
+- Criar duas classes filhas (`Nokia` e `Iphone`) que herdam da classe base.
+- Implementar métodos sobrescritos para instalação de aplicativos, respeitando as diferenças de cada marca.
 
-#### Projeto - Sistema de Celulares
+### 🛠️ Objetivos
+O objetivo é aplicar os conceitos de POO aprendidos no módulo:
+- Abstração
+- Herança
+- Polimorfismo
+- Encapsulamento
 
-- Desafio de projeto: Para este desafio, foi preciso usar os conhecimentos adquiridos no módulo de orientação a objetos, da trilha .NET da DIO.
+**📌 Pré-requisitos**
+1. Ter o [.NET 6.0](https://dotnet.microsoft.com/pt-br/download/dotnet/6.0) instalado.
+2. Ter o [Node.js](https://www.nodejs.tech/pt-br/download) instalado.
+3. Editor de código [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [VS Code](https://code.visualstudio.com/).
 
-- Contexto: Na proposta desafio o desenvoledor é responsável por modelar um sistema que trabalha com celulares. Para isso, foi solicitado que você faça uma abstração de um celular e disponibilize maneiras de diferentes marcas e modelos terem seu próprio comportamento, possibilitando um maior reuso de código e usando a orientação a objetos.
+**📂 Estrutura do Projeto**
+```
+SistemaCelulares/
+│
+├── 📁 Models
+│   ├── Smartphone.cs
+│   ├── Nokia.cs
+│   └── Iphone.cs
+│
+├── 📁 Diagrams
+│   └── diagrama-sistema-celulares.png
+│
+├── 📄 Program.cs
+├── 📄 SistemaCelulares.csproj
+└── 📄 README.md
+```  
 
-- Proposta: Foi preciso criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone. Foi preciso criar as classes de acordo com o diagrama abaixo:
+**📜 Regras e Validações**
+1. `Smartphone` deve ser **abstrata** e não pode ser instanciada servindo apenas como modelo.
+```
+Smartphone: `numero`  (string), `modelo`  (string), `imei` (string) e `memoria` (int). Sendo modelo, IMEI e memoria `privadas` e numero `pública`
+```
+2. `Nokia` e `Iphone` devem herdar de `Smartphone`.
+```
+Iphone: numero, modelo, imei e memoria com herança da classe smartphone.
+Nokia: numero, modelo, imei e memoria com herança da classe smartphone.
+```
+3. O método `InstalarAplicativo` deve ser sobrescrito nas classes filhas, pois ambos possuem diferentes maneiras de instalar um aplicativo.    
 
-<img width="220" src="">
+**📂 Especificações de Conteúdo**
+- **Classe abstrata:** `Smartphone`
+- **Propriedades:** 
+  - `numero` (pública)
+  - `modelo`, `imei`, `memoria` (privadas)
+- **Métodos:**
+  - `Ligar`()
+  - `ReceberLigacao`()
+  - `InstalarAplicativo()` (abstract)
+```
+Smarthpone: `Ligar()`, `ReceberLigacao()` e `IntalarAplicativos` (abstract).
+Iphone: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
+Nokia: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
+ ```  
 
-#### Contém três classes com as seguintes propriedades:
-
-- Smartphone: `numero`  (string), `modelo`  (string), `imei` (string) e `memoria` (int). Sendo modelo, IMEI e memoria `privadas` e numero `pública`.  
-- Iphone: numero, modelo, imei e memoria com herança da classe smartphone.
-- Nokia: numero, modelo, imei e memoria com herança da classe smartphone.
-
-#### E métodos:
-
-- Smarthpone: `Ligar()`, `ReceberLigacao()` e `IntalarAplicativos` (abstract).
-- Iphone: `InstalarAplicativos` (string nome) com herança da classe Smartphone.
-- Nokia: `InstalarAplicativos` (string nome) com herança da classe Smartphone..
-
-### Regras e validações
-1. A classe Smartphone deve ser abstrata, não permitindo instanciar e servindo apenas como modelo.
-2. A classe Nokia e Iphone devem ser classes filhas de Smartphone.
-3. O método InstalarAplicativo deve ser sobrescrito na classe Nokia e iPhone, pois ambos possuem diferentes maneiras de instalar um aplicativo.
-
-### Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
-
-#### Especificações de conteúdo:
-- Sua composição de sistema (classes, propriedades e métodos).
-- A saída deve exibir as classes e métodos para testes.
-
-#### Especificações técnicas:
+**⚙️ Especificações Técnicas**
+- Mensagens apropriadas devem ser exibidas em cada ação.
 - Todos os dados são capturados pelo sistema.
-- Exibir as mensagens apropriadas a cada situação  para eficiência dos testes..
-- Compor os parâmetros para as propriedades.
-- Utilize propriedades privadas e pública.
+- Uso de propriedades públicas e privadas.
+- Implementar todo o código marcado com `// TODO`.  
 
-### Instruções de Uso
+### 🚀 Passo a Passo
+1. Criar classe abstrata `Smartphone`.
+2. Implementar métodos básicos (`Ligar`, `ReceberLigacao`).
+3. Criar classes `Nokia` e `Iphone` herdando de `Smartphone`.
+4. Implementar `InstalarAplicativo()` para cada modelo.
+5. Testar as classes no `Program.cs`.  
 
-1. Clone ou baixe este repositório para a sua máquina local.
+### 📊 Modelo do Diagrama
+```
+Criar um sistema em .NET, do tipo console, mapeando uma classe abstrata e classes específicas para dois tipos de celulares: Nokia e iPhone.
+```
+<img width="400" align="center" src="./images/diagrama.png">
 
-2. Certifique-se de ter o [Node.js](https://nodejs.org/en/download/current) e [.NET 8.0](https://dotnet.microsoft.com/pt-br/download) instalado em sua máquina.
-
-3. Abra o terminal e navegue até o diretório raiz do projeto.
-
-4. Para executar, utilize o comando:
+#### 💻 Execução do Projeto
+1. Clone este repositório.
+2. No terminal, navegue até o diretório do projeto.
+3. Execute:
 ```
 dotnet run
 ```
 
 ### Créditos
-Este projeto foi desenvolvido como parte de avaliação de desafio do Decola Tech Avanade 4ª Edição 2024, para avaliar o ensinado na bootcamp de POO da linguagem de programação `C#`.
+Este projeto foi desenvolvido como parte de avaliação de Desafio de Projeto do Decola Tech Avanade 2024, para avaliar o ensinado na bootcamp de POO da linguagem de programação `C#`.
 
 *Nota: Este projeto é apenas para fins educacionais e não possui nenhuma afiliação oficial com a franquia DIO ou Avanade ou suas empresas associadas.*
 
-## Autora:
-<table>
+### 👩🏼‍💻 Autora:
+<table style="border=0">
   <tr>
-    <td>
-      <img width="80px" align="center" src="https://github.com/rhayssakramer/rhayssakramer/blob/main/assets/images/logo.png"/>
-    </td>
     <td align="left">
       <a href="https://github.com/rhayssakramer">
         <span><b>Rhayssa Kramer</b></span>
       </a>
       <br>
-      <span>Desenvolvedora Full Stack</span>
+      <span>Assoc, Full-Stack Development</span>
     </td>
   </tr>
 </table>
 
-##
-<div align="center">Feito por <a href="https://github.com/rhayssakramer">@devrhakramer</a>.</div>
+<div align="center"><a href="https://github.com/rhayssakramer"><img src="https://github.com/rhayssakramer/rhayssakramer/blob/main/img/rodape.png"></a></div>
