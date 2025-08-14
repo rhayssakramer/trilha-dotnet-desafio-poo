@@ -46,7 +46,7 @@ O objetivo é aplicar os conceitos de POO aprendidos no módulo:
 2. Ter o [Node.js](https://www.nodejs.tech/pt-br/download) instalado.
 3. Editor de código [Visual Studio](https://visualstudio.microsoft.com/pt-br/) ou [VS Code](https://code.visualstudio.com/).
 
-### 🚀 Passo a Passo
+#### 🚀 Passo a Passo
 1. Criar classe abstrata `Smartphone`.
 2. Implementar métodos básicos (`Ligar`, `ReceberLigacao`).
 3. Criar classes `Nokia` e `Iphone` herdando de `Smartphone`.
