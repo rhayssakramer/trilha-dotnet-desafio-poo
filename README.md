@@ -12,7 +12,7 @@ O objetivo é criar um sistema de console em .NET 6.0 que modele diferentes tipo
   - [x] [Passo a Passo]()
   - [x] [Estrutura do Projeto]()
   - [x] [Regras e Validações]()
-  - [x] [Especificações de Conteúdo]
+  - [x] [Especificações de Conteúdo]()
   - [x] [Especificações Técnicas]()
 - [Modelo do Diagrama]()
 - [Execução do Projeto]()
