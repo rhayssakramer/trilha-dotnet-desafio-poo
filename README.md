@@ -29,7 +29,7 @@ O desafio consiste em criar um sistema de console utilizando .NET e C# para trei
 | :-----------------: | :-----------------------: |
 | <img height="40" src="https://skillicons.dev/icons?i=cs"> <img height="40" src="https://skillicons.dev/icons?i=dotnet"> <img height="40" src="https://skillicons.dev/icons?i=nodejs"> | <img height="40" src="https://skillicons.dev/icons?i=vscode">
 
-#### 🎯 Desafio de Projeto
+### 🎯 Desafio de Projeto
 - Criar uma classe abstrata `Smartphone` com atributos e métodos básicos.
 - Criar duas classes filhas (`Nokia` e `Iphone`) que herdam da classe base.
 - Implementar métodos sobrescritos para instalação de aplicativos, respeitando as diferenças de cada marca.
