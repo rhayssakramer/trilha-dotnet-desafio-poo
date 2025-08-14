@@ -9,7 +9,7 @@ Mais um `Projeto na Linguagem de Programação C#`e também mais um desafio da t
 
 | Linguagens de Programação | Ferramentas e Tecnologias |
 | :-----------------: | :-----------------------: |
-| <img height="40" src="https://github.com/rhayssakramer/rhayssakramer/blob/main/assets/icon/C%23.svg"> <img height="40" src="https://github.com/rhayssakramer/rhayssakramer/blob/main/assets/icon/dotnet.svg"> <img height="40" src="https://github.com/rhayssakramer/rhayssakramer/blob/main/assets/icon/NodeJS-Dark.svg"> | <img height="40" src="https://github.com/rhayssakramer/rhayssakramer/blob/main/assets/icon/VSCode-Dark.svg">
+| <img height="40" src="https://learn.microsoft.com/pt-br/dotnet/csharp/"> <img height="40" src="https://dotnet.microsoft.com/pt-br/platform/try-dotnet"> <img height="40" src="https://nodejs.org/docs/latest/api/"> | <img height="40" src="https://code.visualstudio.com/docs">
 
 ## Requisitos do Projeto
 
